@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import { v2 as cloudinary } from "cloudinary";
 import authRoutes from "./routes/authRoutes.js"
 import userRoutes from "./routes/userRoutes.js"
+import postRoutes from "./routes/postRoutes.js"
 import connectDB from "./db/config.js";
 
 
@@ -25,6 +26,7 @@ app.use(cookieParser());
 
 app.use("/api/v1/auth",authRoutes);
 app.use("/api/v1/users",userRoutes);
+app.use("/api/v1/posts",postRoutes);
 
 
 app.listen(PORT,()=>{
