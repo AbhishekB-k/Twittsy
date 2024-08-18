@@ -4,7 +4,7 @@ import Notification from "../models/notificationModel.js";
 import User from "../models/userModel.js";
 
 
-export const getUserProfile = async (re,res)=>{
+export const getUserProfile = async (req,res)=>{
     const {username} = req.params;
     try {
 		const user = await User.findOne({ username }).select("-password");
